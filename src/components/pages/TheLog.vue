@@ -4,7 +4,7 @@
     <div v-if="logs.length">
         <ul>
           <li v-for="log in logs" :key="log.id">
-            <h2>{{ log.date }}</h2>
+            <router-link :to="`/log/${log.id}`">{{ log.date }}</router-link>
             <p>{{ log.time }}</p>
             <p>{{ log.location }}</p>
             <p>{{ log.length }} Miles</p>
@@ -17,6 +17,11 @@
 
 <script>
 export default {
+  methods: {
+    showLog(id) {
+      this.$router.push(`/log/${id}`);
+    }
+  },
   data() {
     return {
       logs: []
@@ -27,7 +32,7 @@ export default {
       .then(response => response.json())
       .then(data => {
         this.logs = data.map(log => ({
-          id: log.id,
+          id: log._id,
           date: log.date,
           time: log.time,
           location: log.location,
