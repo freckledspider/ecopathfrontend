@@ -1,5 +1,6 @@
 <template>
     <h1>Path Log</h1>
+    <router-link to="/new">New Entry</router-link>
     <div v-if="logs.length">
         <ul>
           <li v-for="log in logs" :key="log.id">
@@ -7,7 +8,8 @@
             <p>{{ log.time }}</p>
             <p>{{ log.location }}</p>
             <p>{{ log.length }} Miles</p>
-            <!-- <p v-for="log in logs" :key="log.id"><img :src="log.images"></p> -->
+            <p><img :src="log.image" width="300"/></p>
+            <p>{{ log.observations }}</p>
             </li>
         </ul>
       </div>
@@ -30,7 +32,7 @@ export default {
           time: log.time,
           location: log.location,
           length: log.length,
-          images: log.images,
+          image: log.image,
           observations: log.observations
         })
         );
