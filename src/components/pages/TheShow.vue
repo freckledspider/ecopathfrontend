@@ -29,22 +29,23 @@ export default {
       });
   },
   methods: {
-    deleteLog() {
-      const id = this.$route.params.id;
+  deleteLog() {
+    const id = this.$route.params.id;
+    if (confirm("Are you sure you want to delete this entry?")) {
       fetch(`https://ecopathbackend.onrender.com/log/${id}`, {
-        method: 'DELETE',
+        method: 'DELETE'
       })
-        .then(response => {
-          if (response.ok) {
-            // Redirect to the logs index page if the deletion is successful
-            this.$router.push('/log');
-          } else {
-            throw new Error('Error deleting log data.');
-          }
-        })
-        .catch(error => {
-          console.error('Error deleting log data:', error);
-        });
+      .then(response => {
+        if (response.ok) {
+          this.$router.push('/log');
+        } else {
+          throw new Error('Error deleting log data.');
+        }
+      })
+      .catch(error => {
+        console.error('Error deleting log data:', error);
+      });
     }
+  }
 }};
 </script>
