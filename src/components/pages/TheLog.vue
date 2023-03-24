@@ -17,11 +17,6 @@
 
 <script>
 export default {
-  methods: {
-    showLog(id) {
-      this.$router.push(`/log/${id}`);
-    }
-  },
   data() {
     return {
       logs: []

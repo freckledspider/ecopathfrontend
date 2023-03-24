@@ -6,14 +6,16 @@ import TheIndex from './components/pages/TheIndex.vue'
 import TheLog from './components/pages/TheLog.vue'
 import TheShow from './components/pages/TheShow.vue'
 import TheCreate from './components/pages/TheCreate'
+import LogEdit from './components/pages/LogEdit'
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         { name: 'index', path: '/', component: TheIndex },
         { name: 'log', path: '/log', component: TheLog },
-        { name: 'LogShow', path: '/log/:id', component: TheShow },
+        { name: 'logShow', path: '/log/:id', component: TheShow },
         { name: 'new', path: '/new', component: TheCreate },
+        { name: 'logEdit', path: '/edit/:id', component: LogEdit },
     ]
 })
 
