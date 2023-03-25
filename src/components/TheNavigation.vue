@@ -1,7 +1,6 @@
 <template>
-    <header>
+    <div class="navigation">
     <h1>Ecopath</h1>
-        <nav>
           <ul>
             <li>
               <router-link to="/">Home</router-link>
@@ -13,6 +12,5 @@
               <router-link to="/log">Log</router-link>
             </li>
           </ul>
-        </nav>
-      </header>
+      </div>
 </template>

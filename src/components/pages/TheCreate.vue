@@ -3,13 +3,13 @@
       <h1>Create New Entry</h1>
       <form @submit.prevent="createLog">
           <label for="date">Date:</label>
-          <input type="text" name="date" v-model="logDate"><br/>
+          <input type="date" name="date" v-model="logDate"><br/>
           <label for="time">Time:</label>
-          <input type="text" name="time" v-model="logTime"><br/>
+          <input type="time" name="time" v-model="logTime"><br/>
           <label for="location">Location:</label>
           <input type="text" name="location" v-model="logLocation"><br/>
-          <label for="length">Length:</label>
-          <input type="text" name="length" v-model="logLength"><br/>
+          <label for="length">Length (Miles):</label>
+          <input id="length-input" type="number" step="0.01" name="length" v-model="logLength"><br/>
           <label for="image">Image URL:</label>
           <input type="text" name="image" v-model="logImage"><br/>
           <label for="observations">Observations:</label>
@@ -28,7 +28,8 @@
         logLocation: '',
         logLength: '',
         logImage: '',
-        logObservations: ''
+        logObservations: '',
+        lengthInput: null
       }
     },
     methods: {
