@@ -19,6 +19,8 @@ const router = createRouter({
     ]
 })
 
+export default router
+
 const app = createApp(App)
 
 app.use(router);
