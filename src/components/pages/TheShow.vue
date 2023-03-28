@@ -1,11 +1,16 @@
 <template>
+<div class="main">
   <div v-if="log">
     <h1>{{ log.date }}</h1>
+    <p>{{ log.location }}</p>
     <p>{{ log.time }}</p>
+    <p>{{ log.length }} Miles</p>
     <img :src="log.image" width="500" /><br />
+    <p>{{ log.observations }}</p>
     <router-link :to="`/edit/${log._id}`">Edit Log</router-link><br/>
     <button @click="deleteLog">Delete</button>
   </div>
+</div>
 </template>
 
 <script>

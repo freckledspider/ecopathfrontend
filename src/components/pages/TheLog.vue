@@ -1,12 +1,13 @@
 <template>
+<div class="main">
   <h1>Path Log</h1>
   <router-link to="/new">New Entry</router-link>
 
-  <div v-if="isLoading">
+  <div class="loading" v-if="isLoading">
     Loading log entries...
   </div>
 
-  <div v-else-if="logs.length">
+  <div class="logCard" v-else-if="logs.length">
     <ul>
       <li v-for="log in logs" :key="log.id">
         <router-link :to="`/log/${log.id}`">{{ log.date }}</router-link>
@@ -19,9 +20,10 @@
     </ul>
   </div>
 
-  <div v-else>
+  <div class="loading" v-else>
     No data available.
   </div>
+</div>
 </template>
 
 <script>

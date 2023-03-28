@@ -1,6 +1,6 @@
 <template>
-    <div>
-      <h1>Create New Entry</h1>
+    <div class="main">
+      <h1>Create New Hiking Entry</h1>
       <form @submit.prevent="createLog">
           <label for="date">Date:</label>
           <input type="date" name="date" v-model="logDate"><br/>
