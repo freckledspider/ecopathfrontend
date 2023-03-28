@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background-image: url("ecopathbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Index */
+
+.index {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.welcomeMessage {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 60px;
+}
+
+.welcomeButton {
+    text-transform: uppercase;
+    background: none;
+    border: 3px solid #fff;
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 300px;
+}
+
+.welcomeButton:hover {
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+}
+
+/* Top Navigation Bar */
+
+.navigation {
+  width: 100%;
+}
+
+.siteName {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+ul {
+  list-style-type: none;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+li {
+  float: right;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+li a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  transition: 1s;
+}
+
+li a:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
