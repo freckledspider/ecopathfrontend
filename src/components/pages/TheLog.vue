@@ -1,29 +1,31 @@
 <template>
-<div class="main">
-  <h1>Path Log</h1>
-  <router-link to="/new">New Entry</router-link>
+  <div class="main">
+    <h1>Path Log</h1>
+    <router-link to="/new"><button>New Entry</button></router-link>
+    <div class="container">
 
-  <div class="loading" v-if="isLoading">
-    Loading log entries...
-  </div>
+      <div class="loading" v-if="isLoading">
+        Loading log entries...
+      </div>
 
-  <div class="logCard" v-else-if="logs.length">
-    <ul>
-      <li v-for="log in logs" :key="log.id">
-        <router-link :to="`/log/${log.id}`">{{ log.date }}</router-link>
-        <p>{{ log.time }}</p>
-        <p>{{ log.location }}</p>
-        <p>{{ log.length }} Miles</p>
-        <p><img :src="log.image" width="300"/></p>
-        <p>{{ log.observations }}</p>
-      </li>
-    </ul>
-  </div>
+      <div v-else-if="logs.length">
+        <div v-for="log in logs" :key="log.id">
+          <div class="logCard" :style="{ backgroundImage: `url(${log.image})` }">
+            <div class="logText">
+            <router-link class="logDate" :to="`/log/${log.id}`">{{ log.date }}</router-link><br/>
+            {{ log.time }}<br/>
+            {{ log.location }}<br/>
+            {{ log.length }} Miles
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="loading" v-else>
-    No data available.
+      <div class="loading" v-else>
+        No data available.
+      </div>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
