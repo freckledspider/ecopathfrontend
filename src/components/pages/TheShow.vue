@@ -2,13 +2,25 @@
 <div class="main">
   <div v-if="log">
     <h1>{{ log.date }}</h1>
-    <p>{{ log.location }}</p>
-    <p>{{ log.time }}</p>
-    <p>{{ log.length }} Miles</p>
-    <img :src="log.image" width="500" /><br />
-    <p>{{ log.observations }}</p>
-    <router-link :to="`/edit/${log._id}`">Edit Log</router-link><br/>
+    <table>
+      <tr>
+        <td>
+    <h2>{{ log.location }}</h2>
+    <h3>{{ log.time }}</h3>
+    <h3>{{ log.length }} Miles</h3>
+    <hr/><br/>
+    <h3>Notes/Observations:</h3><br/>
+      {{ log.observations }}
+        </td>
+        <td>
+    <img :src="log.image" width="400" />
+        </td>
+      </tr>
+    </table>
+    <center>
+    <router-link :to="`/edit/${log._id}`"><button>Edit Log</button></router-link>
     <button @click="deleteLog">Delete</button>
+    </center>
   </div>
 </div>
 </template>

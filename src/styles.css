@@ -26,11 +26,30 @@ button {
     color: #fff;
     font-size: 1.5rem;
     transition: 1s;
+    margin: 5px;
 }
 
 button:hover {
     background: none;
     cursor: pointer;
+}
+
+td {
+    padding: 20px;
+}
+
+table {
+    margin: auto;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 2px;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 2px;
 }
 
 /* Main div */
