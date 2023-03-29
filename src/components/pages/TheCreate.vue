@@ -27,7 +27,7 @@
       logTime: '',
       logLocation: '',
       logLength: '',
-      logImage: '',
+      logImage: 'https://i.imgur.com/Vezy7Z7l.jpg',
       logObservations: '',
       lengthInput: null,
       logs: []
