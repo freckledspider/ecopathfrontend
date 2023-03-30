@@ -13,7 +13,7 @@
       {{ log.observations }}
         </td>
         <td>
-    <img :src="log.image" width="400" />
+    <img class="mobileImg" :src="log.image" width="400" />
         </td>
       </tr>
     </table>

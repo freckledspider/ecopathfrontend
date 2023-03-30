@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 
 body {
@@ -207,4 +208,75 @@ height: 250px;
 
 .logDate:hover {
     color: #162333;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 600px){
+	.siteName {
+        font-size: 2rem;
+        width: 100%;
+        border-bottom: 1px solid white;
+    }
+
+    li {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    li a {
+        padding: 10px;
+    }
+
+    .welcomeMessage {
+        font-size: 3rem;
+    }
+
+    .main {
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    
+    h1 {
+        margin: 0px;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        width: 90%;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    .logCard {
+        width: 75%;
+    }
+
+    .loading {
+        top: 50%;
+        left: 15%;
+        font-size: 1.5rem;
+    }
+
+    td {
+        float: left;
+        padding: 0px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .mobileImg {
+        width: 300px;
+    }
 }
