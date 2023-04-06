@@ -46,10 +46,10 @@ EcoPath is a nature trail tracker application that allows hikers and nature enth
 
 ### Screenshots
 #### Browser
-Coming soon.
+<img src="https://i.imgur.com/NbjVpqV.png" width="500"/> <img src="https://i.imgur.com/XHLSEBW.png" width="500"/>
 
 #### Mobile
-Coming soon.
+<img src="https://i.imgur.com/spGvgor.png" height="400"/> <img src="https://i.imgur.com/bcudj23.png" height="400"/>
 
 ### Mockups
 #### Browser
